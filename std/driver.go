@@ -16,6 +16,7 @@ type HistorysComplementWay struct {
 	EndWay   InterWay
 }
 
+//读取历史样本方式
 var HCW_Demo = NewHCW(false, false, IW_Not, IW_Not)
 
 func NewHCW(s, e bool, sw, ew InterWay) HistorysComplementWay {

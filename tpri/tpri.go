@@ -104,9 +104,8 @@ func (this TPRIDriver) Connect(connUrl string, connSize int) (points.RealDB, err
 			log.Println("new tpri conn err:", err)
 		}
 	}
-
+	//设置连接池
 	rdb.conns = &conns
-
 	rdb.loadPoints()
 
 	return rdb, nil
