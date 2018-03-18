@@ -7,7 +7,7 @@ import (
 	"time"
 	"fmt"
 	"unsafe"
-	"../points"
+	"../std"
 	"math/rand"
 )
 
@@ -103,7 +103,7 @@ func (this *SIMDB) loadPoints() {
 
 	ps, err := this.ReadPoints()
 	if err != nil {
-		log.Println("load points err:", err)
+		log.Println("load std err:", err)
 		return
 	}
 
@@ -116,7 +116,7 @@ func (this *SIMDB) loadPoints() {
 	this.points = &ps
 	this.psIndex = &pointMap
 
-	log.Println("load points size:", len(ps))
+	log.Println("load std size:", len(ps))
 }
 
 func init() {

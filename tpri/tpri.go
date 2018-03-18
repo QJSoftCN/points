@@ -1,7 +1,7 @@
 package tpri
 
 import (
-	"../points"
+	"../std"
 	"unsafe"
 	"time"
 	"errors"
@@ -120,7 +120,7 @@ func (this *TPRIDB) loadPoints() {
 	if ps == nil {
 		ps, err := this.ReadPoints()
 		if err != nil {
-			log.Println("load points err:", err)
+			log.Println("load std err:", err)
 			return
 		}
 		points.StorePoints(dir, this.driver.name, ps)
@@ -135,7 +135,7 @@ func (this *TPRIDB) loadPoints() {
 	this.points = &ps
 	this.psIndex = &pointMap
 
-	log.Println("load points size:", len(ps))
+	log.Println("load std size:", len(ps))
 }
 
 func init() {

@@ -11,13 +11,13 @@ import "time"
 		connUrl := confs.GetString("top", "RealDB", "Url")
 		size := confs.GetInt("top", "RealDB", "Size")
 
-		db, err := points.Open(dbName, connUrl, size)
+		db, err := std.Open(dbName, connUrl, size)
 		if err != nil {
 			//record err,tell user,use sim replace.
 			//this is a good method
 			panic(err)
 		} else {
-			points.SetTopDB(db)
+			std.SetTopDB(db)
 		}
  */
 

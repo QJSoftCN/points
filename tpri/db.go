@@ -2,7 +2,7 @@ package tpri
 
 import (
 	"unsafe"
-	"../points"
+	"../std"
 	"errors"
 	"strconv"
 	"strings"

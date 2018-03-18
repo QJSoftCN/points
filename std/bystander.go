@@ -171,7 +171,7 @@ func (this *DigitalSimulator) Merge(simulator PointFeatureSimulator) {
 }
 
 /**
-* monitoring and analysis points
+* monitoring and analysis std
  */
 type HourFeature struct {
 	Hour         int

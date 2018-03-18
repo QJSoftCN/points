@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"time"
 	"github.com/qjsoftcn/confs"
+	"github.com/qjsoftcn/gutils"
 )
-
-const Time_Format = "2006-01-02 15:04:05"
 
 type PointType struct {
 	Id   int
@@ -116,7 +115,7 @@ func (this *PointValue) GetTime() time.Time {
 }
 
 func (this *PointValue) GetTimeString() string {
-	return this.GetTime().Format(Time_Format)
+	return gutils.Format(this.GetTime(),gutils.TF_Sec)
 }
 
 func (this *PointValue) GetQuality() int16 {

@@ -1,7 +1,7 @@
 package sim
 
 import (
-	"../points"
+	"../std"
 	"log"
 	"github.com/qjsoftcn/confs"
 )

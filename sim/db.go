@@ -6,9 +6,10 @@ import (
 	"strconv"
 	"strings"
 	"fmt"
+	"../std"
 )
 
-func (this SIMDB) ReadSnapshot(name string) (*PointValue, error) {
+func (this SIMDB) ReadSnapshot(name string) (*points.PointValue, error) {
 
 	names := make([]string, 1)
 	names[0] = name
@@ -18,7 +19,6 @@ func (this SIMDB) ReadSnapshot(name string) (*PointValue, error) {
 		return &ps[0], err
 	} else {
 		return nil, err
-
 	}
 }
 

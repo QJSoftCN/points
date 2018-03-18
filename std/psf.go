@@ -6,12 +6,12 @@ import (
 	"encoding/json"
 	"strings"
 	"log"
-	"../utils"
+	"github.com/qjsoftcn/gutils"
 )
 
 func StorePoints(dir, dbName string, ps []Point) {
 	filePath := dir + "/" + strings.ToLower(dbName) + ".json"
-	if utils.PathExists(filePath) {
+	if gutils.PathExists(filePath) {
 		os.Remove(filePath)
 	}
 	jcs, err := json.Marshal(ps)
