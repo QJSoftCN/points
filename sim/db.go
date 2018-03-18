@@ -2,14 +2,13 @@ package sim
 
 import (
 	"unsafe"
-	"../points"
 	"errors"
 	"strconv"
 	"strings"
 	"fmt"
 )
 
-func (this SIMDB) ReadSnapshot(name string) (*points.PointValue, error) {
+func (this SIMDB) ReadSnapshot(name string) (*PointValue, error) {
 
 	names := make([]string, 1)
 	names[0] = name

@@ -33,6 +33,4 @@ func Reg(dbName string, db RealDBDriver) {
 func init() {
 	rdrs = make(map[string]RealDBDriver)
 	log.Println("init rdrs")
-	//init point features info
-
 }
